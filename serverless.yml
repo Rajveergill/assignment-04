@@ -41,8 +41,8 @@ functions:
           event: s3:ObjectRemoved:*
   
 
-  notification:
-    handler: notification.notification
+  message:
+    handler: message.message
 
 resources:
   Resources:
