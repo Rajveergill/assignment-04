@@ -43,6 +43,10 @@ functions:
 
   message:
     handler: message.message
+    events:
+      - s3:
+          bucket: ${self:custom.bucket}
+          event: s3:ObjectCreated:*
 
 resources:
   Resources:

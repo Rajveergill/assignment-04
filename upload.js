@@ -29,7 +29,7 @@ module.exports.upload = (event) => {
         return;
       }
       let raj = {
-  FunctionName: 'ass4-dev-notification',
+  FunctionName: 'ass04-dev-message',
   Payload: JSON.stringify({ filename: filename })
       }
       lambda.invoke(raj, (err, results) => {
