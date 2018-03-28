@@ -1,4 +1,4 @@
-service: assignment04
+service: ass04
 
 custom:
   bucket: rajveerdropbox
@@ -18,9 +18,11 @@ provider:
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:us-west-2:*:*"
-    - Effect: Allow
+    - Effect: "Allow"
       Action:
         - s3:*
+        - lambda:InvokeFunction
+        - lambda:InvokeAsync
       Resource: "*"
     
 functions:
